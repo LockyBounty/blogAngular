@@ -1,0 +1,24 @@
+<div class="container">
+    <h3>A la Une</h3>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <ul class="list-group">
+                <li class="list-group-item"
+                *ngFor="let post of posts; let i = index"
+                (click)="onTest(i)">
+                <h3>{{post.title}}</h3>
+                <p>{{post.content}}</p>
+                <div>
+                    <app-post-list-item></app-post-list-item>
+
+                    <button class="btn btn-danger pull-right"
+                    (click)="onTrash(i)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    

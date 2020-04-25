@@ -1,0 +1,31 @@
+
+<div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <h3>Nouvel Article</h3>
+        <form [formGroup]="postForm" (ngSubmit)="onSubmitForm()">
+            <div class="form-group">
+                <label for="titre">Titre de l'article</label>
+                <input type="text" 
+                id="title_"
+                class="form-control"
+                formControlName="title_">
+            </div>
+            <div class="form-group">
+                <label for="contenu">Contenu</label>
+                <textarea type="text" 
+                rows="10"
+                id="content_"
+                class="form-control"
+                formControlName="content_"></textarea>
+            </div>
+            <button 
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="postForm.invalid">Poster</button>
+            <button 
+            class="btn btn-default"
+            (click)="goBack()">Annuler</button>
+        </form>
+        
+    </div>
+</div>
